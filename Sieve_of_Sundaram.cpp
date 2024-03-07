@@ -10,6 +10,7 @@ void SieveOfSundaram(int n)
 	// than (2*x + 2) for a number given number x.
 	// Since we want primes smaller than n, we reduce n to half
 	int nNew = (n-1)/2;
+	int NumOfPrime = 0;
 
 	// This array is used to separate numbers of the form i+j+2ij
 	// from others where 1 <= i <= j
@@ -26,13 +27,18 @@ void SieveOfSundaram(int n)
 
 	// Since 2 is a prime number
 	if (n > 2)
-		cout << 2 << " ";
+		// cout << 2 << " ";
 
 	// Print other primes. Remaining primes are of the form
 	// 2*i + 1 such that marked[i] is false.
 	for (int i=1; i<=nNew; i++)
-		if (marked[i] == false)
+		if (marked[i] == false){
+			NumOfPrime = NumOfPrime+1;
+
+			//print all prime number ,this line cannot print 2,but 2 is also a prime number
 			cout << 2*i + 1 << " ";
+		}
+		cout << " Number of prime number = " << NumOfPrime ;
 }
 
 // Driver program to test above

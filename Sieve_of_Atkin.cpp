@@ -10,6 +10,7 @@ void SieveOfAtkin(int limit)
 	// Initialise the sieve array
 	// with initial false values
 	bool sieve[limit + 1];
+	int NumOfPrime = 0;
 	for (int i = 0; i <= limit; i++)
 		sieve[i] = false;
 
@@ -63,15 +64,20 @@ void SieveOfAtkin(int limit)
 
 	// Print primes using sieve[]
 	for (int a = 1; a <= limit; a++)
-		if (sieve[a])
-			cout << a << " ";
-	cout << "\n";
+		if (sieve[a]){
+			NumOfPrime = NumOfPrime+1;
+
+			//print all prime number
+
+		}
+			
+	cout << " Number of prime number = " << NumOfPrime ;
 }
 
 // Driver program
 int main(void)
 {
-	int limit = 19;
+	int limit = 5;
 	SieveOfAtkin(limit);
 	return 0;
 }
