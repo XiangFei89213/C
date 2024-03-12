@@ -83,11 +83,19 @@ bool isPrime(int n, int k)
 int main()
 {
 	int k = 4; // Number of iterations
+	int numOfPrime =0;
+	int prime = 100;
+	// cout << "All primes smaller than 100: \n";
+	for(int n=1; n<prime; n++){
+		if(isPrime(n,k)){
+			numOfPrime++;
+		}
+	}
 
-	cout << "All primes smaller than 100: \n";
-	for (int n = 1; n < 100; n++)
-	if (isPrime(n, k))
-		cout << n << " ";
+	cout << numOfPrime ;
+	// for (int n = 1; n < 100; n++)
+	// if (isPrime(n, k))
+	// 	cout << n << " ";
 
 	return 0;
 }
