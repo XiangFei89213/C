@@ -92,7 +92,7 @@ int main()
 		}
 	}
 
-	cout << numOfPrime ;
+	cout << "there are " << numOfPrime <<"prime number";
 	// for (int n = 1; n < 100; n++)
 	// if (isPrime(n, k))
 	// 	cout << n << " ";
